@@ -1,21 +1,24 @@
 NOME_ARQ = input('Digite o nome do arquivo: ')
 
 arq = open(NOME_ARQ,'wb')
-CAMPO = input('Sobrenome: ')
+CAMPO = input(f'{" " * 5 }Sobrenome: ')
+
+dados_pessoais = ['Nome: ', 'Endereço: ', 'Cidade: ', 'Estado: ', 'CEP: ']
 
 while CAMPO != '':
     BUFFER = ''
     BUFFER += CAMPO + '|'
 
-    for campo in CAMPO:
-        CAMPO = campo
+    for campo in dados_pessoais:
+        CAMPO = input(f'{" " * 5}{campo}')
         BUFFER += CAMPO + '|'
 
-    TAM = len(BUFFER.encode())
-    TAM.to_bytes(2)
+    print(' ')
+    BUFFER = BUFFER.encode()
+    TAM = len(BUFFER)
+    TAM = TAM.to_bytes(2)
 
     arq.write(TAM)
     arq.write(BUFFER)
-    CAMPO = input('Sobrenome: ')
-
+    CAMPO = input(f'{" " * 5 }Sobrenome: ')
 arq.close()

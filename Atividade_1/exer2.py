@@ -1,8 +1,8 @@
 try:
-    NOME_ARQ = input('Digite o arquivo para ser lido: ')
+    NOME_ARQ = input('Digite o nome do arquivo para ser lido: ')
 
     arq = open(NOME_ARQ, 'r')
-    print('Arquivo aberto!')
+    print(' ')
 
     def leia_campo(ENTRADA):
         CAMPO = ''
@@ -13,30 +13,16 @@ try:
         
         return CAMPO
 
-
     CAMPO = leia_campo(arq)
     i = 1
     while CAMPO != '':
         print(f'{" "*8}Campo #{i}: {CAMPO}')
         CAMPO = leia_campo(arq)
         i += 1
-
+    print(' ')
     print('-----' * 15)
     arq.close()
 
 except:
     print('O arquivo não foi aberto, fim do programa!')
-
-
-
-
-
-
-
-
-
-
-
-
-
 

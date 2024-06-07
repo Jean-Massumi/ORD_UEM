@@ -1,5 +1,5 @@
-sugestao_arquivo = input('Nome do novo arquivo: ')
-arq = open(sugestao_arquivo, 'w')
+nome_arquivo = input('Digite o nome do arquivo: ')
+arq = open(nome_arquivo, 'w')
 SOBRENOME = input('Sobrenome: ')
 
 while SOBRENOME != '':
@@ -8,8 +8,8 @@ while SOBRENOME != '':
     NOME = input('Nome: ')
     arq.write(NOME + '|')
 
-    ENDEREÇO = input('Endereço: ')
-    arq.write(ENDEREÇO + '|')
+    ENDERECO = input('Endereço: ')
+    arq.write(ENDERECO + '|')
 
     CIDADE = input('Cidade: ')
     arq.write(CIDADE + '|')
