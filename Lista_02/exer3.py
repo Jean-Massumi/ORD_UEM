@@ -17,8 +17,8 @@ def main() -> None:
         while atual:
             if (atual != antes) or ((antes != " ") and (atual != " ")):
                 novoArq.write(atual)
-                antes = atual
 
+            antes = atual
             atual = arq.read(1)
         
         novoArq.close()
