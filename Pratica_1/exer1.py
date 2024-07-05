@@ -23,19 +23,3 @@ while SOBRENOME != '':
     SOBRENOME = input('Sobrenome: ')
 
 arq.close()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
